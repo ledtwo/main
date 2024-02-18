@@ -1,0 +1,129 @@
+﻿body{margin:0;padding:0;background:#ffe;font-size:14px;font-family:'微软雅黑','宋体',sans-serif;color:#231F20;overflow:auto;
+}
+a {color:#000;font-size:14px;}
+#main{
+    width:100%;
+}
+#wrap{
+    position:relative;
+    margin:0 auto;
+    width:1100px;
+    height:680px;
+    margin-top:10px;
+    z-index: 1000;
+}
+#text{
+    width:400px;
+    height:425px;
+    left:120px;
+    top:80px;
+    position:absolute;
+}
+#code{
+    display:none;
+    font-size:14px;
+}
+#clock-box {position:absolute;left:60px;top:550px;font-size:28px;display:none;}
+#clock-box a {font-size:28px;text-decoration:none;}
+#clock{margin-left:48px;}
+#clock .digit {font-size:64px;}
+#canvas{margin:0 auto;width:1100px;height:680px;}
+#error{margin:0 auto;text-align:center;margin-top:60px;display:none;}
+.hand{cursor:pointer;}
+.say{margin-left:5px;}
+.space{margin-right:150px;}
+
+
+.cart-img,.cart-img2{
+    width: 220px;
+    height: 276px;
+    cursor: pointer;
+    top: 75%;
+    transform: translateY(-50%);
+    position: absolute;
+    perspective: 500;
+    background: transparent;
+    z-index: 1002;
+    -webkit-perspective: 500;
+}
+.cart-img{
+    right: 0;
+    bottom:30%;
+}
+.cart-img2{
+    left: 50px;
+}
+.cart-img img,
+.cart-img2 img{
+    max-width: 220px;
+    max-height: 276px;
+    border-radius: 20px 20px 0 0;
+}
+/* 对每张照片来一张随机位置 */
+.cart-img2.p4{
+    top: 50%;
+    left: 100px;
+}
+.cart-img2.p5{
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+.cart-img2.p6{
+    top: 90%;
+    left: 400px;
+}
+.cart-img.p7{
+    top: 50%;
+}
+.cart-img.p8{
+    top: 65%;
+    right: 300px;
+}
+/* 这是 */
+.front,.back {
+    position: absolute;
+    border-radius: 20px;
+    background-color:rgba(0,0,0,0);
+    perspective: 1000;
+    backface-visibility: hidden;
+    transition: all 1.5s;
+    box-shadow: rgba(50, 50, 50, 0.2) 0 0 15px;
+    overflow: hidden;
+
+}
+.title{
+    margin: 2px 0;
+    text-align: center;
+}
+.back {
+    text-align: center;
+    transform: rotateY(-180deg);
+}
+
+.cart-img:hover .front {
+    transform: rotateY(-180deg);
+}
+
+.cart-img:hover .back {
+    transform: rotateY(-360deg);
+}
+
+.cart-img2:hover .front {
+    transform: rotateY(-180deg);
+}
+
+.cart-img2:hover .back {
+    transform: rotateY(-360deg);
+}
+
+#flyImg{
+    position: absolute;
+    /* top:50%; */
+    /* left: 10%; */
+}
+@media screen and (min-width: 980px) {
+    #beleme-navbar {
+        width: 100%;
+    }
+}
